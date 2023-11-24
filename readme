@@ -1,0 +1,23 @@
+Projet de fin de semaine : créer un outil en ligne de commande
+
+1 / Nous souhaitons reproduire le comportement de la commande ls au niveau du terminal.
+
+Pour cela nous allons créer un projet sous node qui sera sous la forme d'un éxécutable. Lorsque notre exécutable sera lancé, le terminal devra nous afficher le contenu d'un dossier.
+
+ex :
+
+3wals . --> m'affiche la liste des dossiers.fichiers dans le dossier courant
+3wals ./undossier --> m'affiche la liste des dossiers/fichiers dans le dossier nommé "undossier" dans le repértoire courant
+
+Ainsi de suite...
+
+
+1ère étape : regarde la documentation de l'api de node en ce qui concerne le module standard FS :
+
+https://nodejs.org/docs/latest/api/
+
+2ème étape : comment générer un exécutable avec node
+
+3ème étape : quel module de node peut nous aider à exécuter des commandes dans le terminal
+
+Have fun !

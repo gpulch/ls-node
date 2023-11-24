@@ -1,0 +1,16 @@
+{
+  "name": "projet-ligne-commande-ls",
+  "version": "1.0.0",
+  "description": "Projet de fin de semaine : créer un outil en ligne de commande",
+  "main": "listFiles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg --target node14-macos-arm64 listFiles.js --output gpulchLS"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}
