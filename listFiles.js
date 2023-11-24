@@ -23,18 +23,18 @@ const listFilesAndDirectories = (path) => {
   });
 };
 
-const hasUserSpecifiedDir = process.argv[2];
+const executableName = process.argv[1];
+const userSpecifiedDir = process.argv[2];
+const defaultDirectory = process.env.MY_SCRIPT_DEFAULT_PATH || "./";
 
-if (hasUserSpecifiedDir) {
-  listFilesAndDirectories(hasUserSpecifiedDir);
+if (userSpecifiedDir) {
+  listFilesAndDirectories(userSpecifiedDir);
   rl.close();
 } else {
-  rl.question(
-    chalk.green("Please enter a path or press Enter for current path : "),
-    (answer) => {
-      const directoryPath = answer || "./";
-      listFilesAndDirectories(directoryPath);
-      rl.close();
-    }
-  );
+  const promptMessage = `Please enter a path or press Enter for the default path (${defaultDirectory}): `;
+  rl.question(chalk.green(promptMessage), (answer) => {
+    const directoryPath = answer || defaultDirectory;
+    listFilesAndDirectories(directoryPath);
+    rl.close();
+  });
 }
